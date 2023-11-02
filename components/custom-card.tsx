@@ -1,6 +1,8 @@
 import React from "react";
 import {Card, Image, Text, Badge, Button, Group} from "@mantine/core";
 import {useNavigate} from "react-router-dom";
+import NextImage from 'next/image';
+
 
 function CustomCard({
                       imageUrl,
@@ -14,7 +16,7 @@ function CustomCard({
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section>
-        <Image src={imageUrl} height={160} alt={title}/>
+        <Image component={NextImage} src={imageUrl} height={160} alt={title}/>
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">

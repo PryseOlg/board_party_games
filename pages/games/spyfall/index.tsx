@@ -1,6 +1,8 @@
 import {SimpleGrid, Image, Flex, Box, Container, Space, BackgroundImage, AppShell} from "@mantine/core";
 import React from "react";
 import CustomCard from "../../../components/custom-card";
+import card from "../../../public/games/card.jpg"
+import detective from "../../../public/games/detective.jpg"
 
 export default function Spyfall() {
   return (
@@ -14,65 +16,46 @@ export default function Spyfall() {
 
           <SimpleGrid cols={6}>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
             <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+              imageUrl={card}   title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+
           </SimpleGrid>
           <Space h={"xl"}></Space>
           <Flex justify={"center"}>
-            <CustomCard
-              imageUrl={'https://downloader.disk.yandex.ru/preview/2de619fe71fb9f4bfee1dd92aa98a6e7bee3dd20da8a45ebc87f6858813b4983/65439493/-AcF808hXweyzNTV2c1NzWxom3bb4jiFGHUbFeMllECGx3Up_a8tesTNE8wV06u4vpuihGD9BjH-z12Qm9zeGA%3D%3D?uid=0&filename=18034358.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'}
-              title={'Карточка'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
+            <CustomCard imageUrl={detective} title={'Детектив'} badgeText={''} description={''} buttonText={''} to={''}></CustomCard>
           </Flex>
         </Container>
         <Space h={"xl"}></Space>

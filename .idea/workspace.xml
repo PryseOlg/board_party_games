@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04743d5c-631a-4177-9149-a2818727d9f1" name="Changes" comment="Added page with create session">
+    <list default="true" id="04743d5c-631a-4177-9149-a2818727d9f1" name="Changes" comment="Added page with session of spyfall">
+      <change afterPath="$PROJECT_DIR$/public/games/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/games/card.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/games/detective.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/games/er2-990x742.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/games/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/games/search.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/custom-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/custom-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/choose-game/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/choose-game/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/create-or-join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-or-join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/create-session/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-session/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/games/spyfall/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/games/spyfall/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/choose-game.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/choose-game.type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/choose-game.type.tsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +83,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Olegk\WebstormProjects\board_party_games\public\games" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698896926308</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added page with session of spyfall">
+      <option name="closed" value="true" />
+      <created>1698916760600</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698916760600</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,6 +134,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added page with create session" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added page with create session" />
+    <MESSAGE value="Added page with session of spyfall" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added page with session of spyfall" />
   </component>
 </project>

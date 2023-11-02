@@ -1,5 +1,5 @@
 type TChooseGame ={
-  imageUrl: string
+  imageUrl: object
   title: string,
   badgeText: string,
   description: string,
