@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04743d5c-631a-4177-9149-a2818727d9f1" name="Changes" comment="Added page with session of spyfall">
-      <change afterPath="$PROJECT_DIR$/public/games/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/card.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/detective.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/er2-990x742.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/search.png" afterDir="false" />
+    <list default="true" id="04743d5c-631a-4177-9149-a2818727d9f1" name="Changes" comment="Delete link from web, add local pic">
+      <change afterPath="$PROJECT_DIR$/query/api/create-key.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/custom-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/custom-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/choose-game/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/choose-game/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/create-or-join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-or-join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/games/spyfall/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/games/spyfall/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/choose-game.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/choose-game.type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/choose-game.type.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/create-session/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-session/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +17,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -42,12 +31,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "PryseOlg"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PryseOlg&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -67,22 +56,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "v3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "C:\\Users\\Olegk\\WebstormProjects\\board_party_games\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Olegk\\WebstormProjects\\board_party_games\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Olegk\WebstormProjects\board_party_games\public\games" />
@@ -98,6 +87,8 @@
       <updated>1698871507773</updated>
       <workItem from="1698871508873" duration="1829000" />
       <workItem from="1698891815718" duration="701000" />
+      <workItem from="1698921455867" duration="1051000" />
+      <workItem from="1698925379455" duration="2541000" />
     </task>
     <task id="LOCAL-00001" summary="Added page with create session">
       <option name="closed" value="true" />
@@ -115,7 +106,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698916760600</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Delete link from web, add local pic">
+      <option name="closed" value="true" />
+      <created>1698919341949</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698919341949</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added page with create session" />
     <MESSAGE value="Added page with session of spyfall" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added page with session of spyfall" />
+    <MESSAGE value="Delete link from web, add local pic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete link from web, add local pic" />
   </component>
 </project>
