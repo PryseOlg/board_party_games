@@ -1,9 +1,8 @@
 import {Badge, Box, Button, Card, Flex, Grid, Group, Image, Space, Text} from "@mantine/core";
 
-export default function Main() {
+export default function Index() {
   return (
-    <>
-
+    <Box>
       <Flex direction="column" >
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Card.Section>
@@ -51,6 +50,6 @@ export default function Main() {
           </Button>
         </Card>
       </Flex>
-    </>
+    </Box>
   )
 }

@@ -1,10 +1,20 @@
-import { Button, Group } from "@mantine/core";
-import Main from "./main/main";
+import { createGetInitialProps } from '@mantine/next';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-export default function IndexPage() {
-  return (
-    <Group mt={50} justify="center">
-      <Main/>
-    </Group>
-  );
+const getInitialProps = createGetInitialProps();
+
+export default class _Document extends Document {
+      static getInitialProps = getInitialProps;
+
+      render() {
+            return (
+              <Html>
+                    <Head />
+                    <body>
+                    <Main />
+                    <NextScript />
+                    </body>
+              </Html>
+            );
+      }
 }

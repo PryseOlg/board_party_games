@@ -1,20 +1,32 @@
-import "@mantine/core/styles.css";
-import Head from "next/head";
-import { MantineProvider } from "@mantine/core";
-import { theme } from "../theme";
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { MantineProvider } from '@mantine/core';
+import {Main} from "next/document";
+import {createTheme} from "@mantine/core/lib";
+import {BrowserRouter, Route} from "react-router-dom";
+import React from "react";
 
-export default function App({ Component, pageProps }: any) {
+export default function App(props: AppProps) {
+  const { Component, pageProps } = props;
+
   return (
-    <MantineProvider theme={theme}>
+    <>
+    <BrowserRouter>
       <Head>
-        <title>Mantine Template</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
-        />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <title>Page title</title>
+        <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
-      <Component {...pageProps} />
-    </MantineProvider>
+
+      <MantineProvider
+        theme={{
+          fontFamily: 'Open Sans, sans-serif',
+          primaryColor: 'cyan',
+        }}
+      >
+        <Component {...pageProps} />
+        <Route path={"/main"}
+      </MantineProvider>
+    </BrowserRouter>
+    </>
   );
 }
