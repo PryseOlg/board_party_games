@@ -4,25 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04743d5c-631a-4177-9149-a2818727d9f1" name="Changes" comment="Delete trash">
+    <list default="true" id="04743d5c-631a-4177-9149-a2818727d9f1" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/components/custom-card.tsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pages/choose-game/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/join-session/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/bynker.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/catan.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/spyfall.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/games/uno.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/choose-game.type.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/choose-game.type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/main/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-or-join/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,11 +21,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -55,7 +50,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;v2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -65,13 +60,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Olegk\WebstormProjects\board_party_games\public\games" />
-      <recent name="C:\Users\Olegk\WebstormProjects\board_party_games\public" />
-      <recent name="C:\Users\Olegk\WebstormProjects\board_party_games\pages" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -80,26 +68,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698871507773</updated>
-      <workItem from="1698871508873" duration="6643000" />
-      <workItem from="1698878401492" duration="11495000" />
+      <workItem from="1698871508873" duration="1829000" />
+      <workItem from="1698891815718" duration="701000" />
     </task>
-    <task id="LOCAL-00001" summary="Complete simple main page">
-      <option name="closed" value="true" />
-      <created>1698873525887</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1698873525887</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Delete trash">
-      <option name="closed" value="true" />
-      <created>1698873664521</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1698873664521</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,10 +86,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Complete simple main page" />
-    <MESSAGE value="Delete trash" />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete trash" />
   </component>
 </project>

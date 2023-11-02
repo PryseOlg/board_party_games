@@ -1,20 +1,10 @@
-import { createGetInitialProps } from '@mantine/next';
-import Document, { Head, Html, Main, NextScript } from 'next/document';
+import { Button, Group } from "@mantine/core";
+import Index from "./create-or-join";
+import CreateOrJoin from "./create-or-join";
+import ChooseGame from "./choose-game";
 
-const getInitialProps = createGetInitialProps();
-
-export default class _Document extends Document {
-      static getInitialProps = getInitialProps;
-
-      render() {
-            return (
-              <Html>
-                    <Head />
-                    <body>
-                    <Main />
-                    <NextScript />
-                    </body>
-              </Html>
-            );
-      }
+export default function IndexPage() {
+  return (
+      <ChooseGame/>
+  );
 }

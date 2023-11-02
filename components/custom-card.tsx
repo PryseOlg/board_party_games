@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Image, Text, Badge, Button, Group } from "@mantine/core";
-import { useNavigate } from "react-router-dom";
+import {Card, Image, Text, Badge, Button, Group} from "@mantine/core";
+import {useNavigate} from "react-router-dom";
 
 function CustomCard({
                       imageUrl,
@@ -8,17 +8,13 @@ function CustomCard({
                       badgeText,
                       description,
                       buttonText,
-                    }:TChooseGame) {
-  const navigate = useNavigate();
-
-  const handleButtonClick = () => {
-    navigate("/main");
-  };
+                      to
+                    }: TChooseGame) {
 
   return (
     <Card shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section>
-        <Image src={imageUrl} height={160} alt={title} />
+        <Image src={imageUrl} height={160} alt={title}/>
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
@@ -31,9 +27,11 @@ function CustomCard({
       </Text>
 
       {buttonText && (
-          <Button variant="light" color="blue" fullWidth mt="md" radius="md" onClick={handleButtonClick}>
+        <a href={`${to}`}>
+          <Button variant="light" color="blue" fullWidth mt="md" radius="md">
             {buttonText}
           </Button>
+        </a>
       )}
     </Card>
   );
