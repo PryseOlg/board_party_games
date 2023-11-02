@@ -7,6 +7,7 @@ export default function ChooseGame() {
     <>
       <Stack align={"center"} justify={"center"}>
         <Space h={"lg"}></Space>
+        <Space h={"lg"}></Space>
         <SimpleGrid cols={3}>
           <CustomCard
             imageUrl='https://downloader.disk.yandex.ru/preview/4dced732ec0d85066cdd276a85e1469698b30071dc229606e296a3166c373d22/65430172/WNDfAaq1VKjt7HfMwDi40mzZYXq3PYbyR0aX69uJyakf1vGMZKw3-2XtbtbP0rleMMSIT3JCN6S6pSEHxyIlAg%3D%3D?uid=0&filename=spyfall.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'

@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04743d5c-631a-4177-9149-a2818727d9f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pages/create-session/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/games/spyfall/index.tsx" afterDir="false" />
+    <list default="true" id="04743d5c-631a-4177-9149-a2818727d9f1" name="Changes" comment="Added page with create session">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/choose-game/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/choose-game/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/create-or-join/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-or-join/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/create-session/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/create-session/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/games/spyfall/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/games/spyfall/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +34,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "PryseOlg"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="97b27a44-ffe9-4a65-a453-b1b1052d7ac6" />
+        <option name="url" value="https://github.com/PryseOlg/board_party_games.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -60,6 +70,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "ts.external.directory.path": "C:\\Users\\Olegk\\WebstormProjects\\board_party_games\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -75,6 +86,15 @@
       <workItem from="1698871508873" duration="1829000" />
       <workItem from="1698891815718" duration="701000" />
     </task>
+    <task id="LOCAL-00001" summary="Added page with create session">
+      <option name="closed" value="true" />
+      <created>1698896926308</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698896926308</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,5 +110,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added page with create session" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added page with create session" />
   </component>
 </project>

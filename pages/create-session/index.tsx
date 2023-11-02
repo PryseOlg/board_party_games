@@ -48,8 +48,8 @@ export default function CreateSession() {
 
   return (
     <>
-      <Flex align={"center"} justify={"center"} gap={"xl"}>
-        <Stack align={"center"} justify={"center"}>
+      <Flex align={"center"} justify={"center"} gap={"xl"} >
+        <Stack align={"center"} justify={"center"} color={"white"}>
           <Space h={"lg"}></Space>
           <Image
             height={200}
