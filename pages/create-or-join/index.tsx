@@ -1,4 +1,6 @@
 import {Badge, Box, Button, Card, Flex, Grid, Group, Image, SimpleGrid, Space, Stack, Text} from "@mantine/core";
+import CustomCard from "../../components/custom-card";
+import React from "react";
 
 export default function CreateOrJoin() {
   return (
@@ -6,51 +8,18 @@ export default function CreateOrJoin() {
       <Flex align={"center"} justify={"center"}>
         <SimpleGrid>
           <Space h={"xl"}></Space>
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Card.Section>
-              <Image
-                src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-                height={160}
-                alt="Norway"
-              />
-            </Card.Section>
-
-            <Group justify="space-between" mt="md" mb="xs">
-              <Text fw={500}>Создание комнаты</Text>
-            </Group>
-
-            <Text size="sm" c="dimmed">
-              Здесь вы можете создать игровую комнату, скопировать ключ и разослать его другим людям для игры вместе!
-            </Text>
-
-            <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-              Создать комнату
-            </Button>
-          </Card>
-
-          <Space h="xl"/>
-
-          <Card shadow="sm" padding="lg" radius="md" withBorder>
-            <Card.Section>
-              <Image
-                src="https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=720&q=80"
-                height={160}
-                alt="Norway"
-              />
-            </Card.Section>
-
-            <Group justify="space-between" mt="md" mb="xs">
-              <Text fw={500}>Присоединение к игре</Text>
-            </Group>
-
-            <Text size="sm" c="dimmed">
-              Здесь вы можете ввести ключ, чтобы играть со своими друзьями
-            </Text>
-
-            <Button variant="light" color="blue" fullWidth mt="md" radius="md">
-              Ввести ключ
-            </Button>
-          </Card>
+          <CustomCard
+            imageUrl='https://downloader.disk.yandex.ru/preview/4dced732ec0d85066cdd276a85e1469698b30071dc229606e296a3166c373d22/65430172/WNDfAaq1VKjt7HfMwDi40mzZYXq3PYbyR0aX69uJyakf1vGMZKw3-2XtbtbP0rleMMSIT3JCN6S6pSEHxyIlAg%3D%3D?uid=0&filename=spyfall.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'
+            badgeText=""
+            buttonText="Создать комнату"
+            description="Создание игровой комнаты, получение ключа и приглашение друзей!!"
+            title="Создание комнаты" to={"/create-session"}></CustomCard>
+          <CustomCard
+            imageUrl='https://downloader.disk.yandex.ru/preview/4dced732ec0d85066cdd276a85e1469698b30071dc229606e296a3166c373d22/65430172/WNDfAaq1VKjt7HfMwDi40mzZYXq3PYbyR0aX69uJyakf1vGMZKw3-2XtbtbP0rleMMSIT3JCN6S6pSEHxyIlAg%3D%3D?uid=0&filename=spyfall.jpg&disposition=inline&hash=&limit=0&content_type=image%2Fjpeg&owner_uid=0&tknv=v2&size=1872x956'
+            badgeText=""
+            buttonText="Присоединиться к игре"
+            description="Здесь вы можете ввести ключ комнаты и зайти к своим друзьям"
+            title="Присоединение к комнате" to={"/create-session"}></CustomCard>
         </SimpleGrid>
       </Flex>
     </>

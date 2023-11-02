@@ -1,9 +1,8 @@
-import {Badge, Card, Group, Text, Image, Button, Stack, Space, SimpleGrid} from "@mantine/core";
+import {Stack, Space, SimpleGrid} from "@mantine/core";
 import React from "react";
 import CustomCard from "../../components/custom-card";
 
 export default function ChooseGame() {
-  // @ts-ignore
   return (
     <>
       <Stack align={"center"} justify={"center"}>
