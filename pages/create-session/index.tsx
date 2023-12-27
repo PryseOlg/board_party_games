@@ -1,21 +1,19 @@
-
-import React, {useState} from "react";
-import {useForm} from "@mantine/form"
-import spyfall from "../../public/games/spyfall.jpg"
+import React, { useState, useEffect } from "react";
+import { useForm } from "@mantine/form";
+import spyfall from "../../public/games/spyfall.jpg";
 
 import {
   Button,
-  Checkbox,
   Flex,
-  Grid, GridCol,
+  Grid,
+  GridCol,
   Image,
   NumberInput,
-  SimpleGrid,
+  Select,
   Space,
   Stack,
+  ActionIcon,
   Text,
-  Textarea,
-  TextInput
 } from "@mantine/core";
 import NextImage from "next/image";
 
@@ -23,9 +21,34 @@ export default function CreateSession() {
   const [key, setKey] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
+  const [selectedDeck, setSelectedDeck] = useState('');
+  const [copied, setCopied] = useState(false);
 
 
-  const handleSubmit = async (event: { preventDefault: () => void; }) => {
+  const handleSubmitGetLocations = async () => {
+    try {
+      const response = await fetch(`http://localhost:8080/Spyfall/getDeck`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setSelectedDeck(data[0]);
+        setResponseMessage('');
+      } else {
+        const errorData = await response.json();
+        setErrorMessage(errorData || 'Произошла ошибка при получении доступных колод');
+      }
+    } catch (error) {
+      console.error('Произошла ошибка при отправке запроса:', error);
+      setErrorMessage('Произошла ошибка при отправке запроса');
+    }
+  };
+
+  const handleSubmitCreateRoom = async (event: { preventDefault: () => void; }) => {
     event.preventDefault();
 
     try {
@@ -35,54 +58,54 @@ export default function CreateSession() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
+          deckName: selectedDeck,
           playersCount: form.values.playersCount,
           spiesCount: form.values.spiesCount,
-          randomSeed: form.values.randomSeed,
         }),
       });
 
       if (response.ok) {
-        const data = await response.text(); // Получите текст из ответа
-        setResponseMessage(data); // Обновите состояние с текстом ответа
+        const data = await response.text();
+        setResponseMessage(data);
       } else {
-        const errorData = await response.text(); // Получите текст из ответа
+        const errorData = await response.text();
         setErrorMessage(errorData || 'Произошла ошибка при создании комнаты');
       }
     } catch (error) {
-      console.error('Произошла ошибка при отправке запроса:', error);
-      setErrorMessage('Произошла ошибка при отправке запроса');
+      console.error('Произошла ошибка при создании комнаты:', error);
+      setErrorMessage('Произошла ошибка при создании комнаты');
     }
-  };
-
-  function generateRandomKey() {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let result = '';
-    for (let i = 0; i < 16; i++) {
-      result += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return result;
-  }
-
-
-  // ...
-
-  const handleGenerateKey = () => {
-    const randomKey = generateRandomKey();
-    setKey(randomKey);
   };
 
   const form = useForm({
-    initialValues: { randomSeed: '', spiesCount: 1, playersCount: 2 },
+    initialValues: { spiesCount: 1, playersCount: 3, deckName: ['Стандартная колода'] },
     validate: {
-      randomSeed: (value) => (value.length < 2 ? 'Name must have at least 2 letters' : null),
-      spiesCount: (value) => (value < 18 ? 'You must be at least 18 to register' : null),
-      playersCount: (value) => (value < 18 ? 'You must be at least 18 to register' : null),
+      spiesCount: (value, formValues) => {
+        if (value < 1) {
+          return 'Шпионов должно быть не меньше чем 1';
+        } else if (value > formValues.playersCount) {
+          return 'Шпионов не может быть больше, чем игроков';
+        }
+        return null;
+      },
+      playersCount: (value) => (value < 3 ? 'Игроков должно быть не меньше чем 3' : null),
     },
   });
 
+  // Вызовем handleSubmitGetLocations при загрузке страницы
+  useEffect(() => {
+    handleSubmitGetLocations();
+  }, []);
+
+  useEffect(() => {
+    console.log('form values:', form.values);
+    console.log('form errors:', form.errors);
+  }, [form.values, form.errors]);
+
   return (
     <>
-      <Flex align={"center"} justify={"center"} gap={"xl"} >
+      <Stack align={"center"} justify={"center"} gap={"xl"}>
+        <Space h="xl" />
         <Stack align={"center"} justify={"center"} color={"white"}>
           <Space h={"lg"}></Space>
           <Image
@@ -94,25 +117,17 @@ export default function CreateSession() {
           />
           <Text>Создание комнаты для игры SpyFall</Text>
           <form onSubmit={form.onSubmit(console.log)}>
-            <Flex gap={"xl"}>
-              <TextInput label="Seed" placeholder="ввести..." {...form.getInputProps('randomSeed')} />
-              <TextInput label="Ваше имя" placeholder="ввести..." {...form.getInputProps('names')} />
-            </Flex>
             <Space h={"lg"}></Space>
             <Grid>
-              <GridCol>
-                <TextInput value={responseMessage} readOnly/>
-              </GridCol>
               <GridCol span="content">
-
-                <Button variant="gradient" gradient={{ from: 'teal', to: 'blue', deg: 60 }} type={"submit"} onClick={handleSubmit}>
-                  Сгенерировать ключ
-                </Button>
+                <Select
+                  label="Список колод"
+                  placeholder="Выбрать..."
+                  data={form.values.deckName} // Замените на данные, полученные из handleSubmitGetLocations
+                  {...form.getInputProps('deckName')}
+                />
               </GridCol>
-
-
             </Grid>
-
             <NumberInput
               mt="sm"
               label="Кол-во игроков"
@@ -127,17 +142,27 @@ export default function CreateSession() {
               max={10}
               {...form.getInputProps('spiesCount')}
             />
+            <ActionIcon
+              onClick={() => {
+                navigator.clipboard.writeText(responseMessage);
+                setCopied(true);
+              }}
+              title={copied ? 'Скопировано!' : 'Скопировать ключ'}
+              radius="sm"
+              size="sm"
+              variant="transparent"
+            >
+            </ActionIcon>
             <a href={"/games/spyfall"}>
-              <Button type={"submit"} onClick={handleSubmit} mt="sm">
+              <Button type="submit" onClick={handleSubmitCreateRoom} mt="sm">
                 Создать комнату
               </Button>
             </a>
           </form>
-          {/* Отобразите сообщение об ошибке, если есть */}
           {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
           <Space h={"lg"}></Space>
         </Stack>
-      </Flex>
+      </Stack>
     </>
-  )
+  );
 }

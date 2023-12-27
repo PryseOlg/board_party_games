@@ -15,6 +15,8 @@ import {
 import React from "react";
 import Footer = Combobox.Footer;
 import {useDisclosure} from "@mantine/hooks";
+import logo from "../public/games/logo.png"
+import NextImage from "next/image";
 
 
 export default function App({ Component, pageProps }: any) {
@@ -39,7 +41,9 @@ export default function App({ Component, pageProps }: any) {
           <Group align={"flex-start"} justify={"flex-start"}>
             <a href={"/"}>
               <Image h={60}
-                     src={"https://downloader.disk.yandex.ru/preview/2c52e76202f95d9f8262cc2d8ec416187d85e60d7333fb408901d03ad3702a1d/65439ec4/fxy9LBCsZgZfVswXxi8X5uDug4pgOS0JxExVUr8zo1Sc2M4ulqE2Oayj1JTpu_cgCdBhqMG9_5kZVaHCJX_elg%3D%3D?uid=0&filename=Board-And-Games-02-11-2023.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=1872x956"}>
+                     component={NextImage}
+                     src={logo}
+              alt={""}>
               </Image>
             </a>
             <Avatar radius="xl" />

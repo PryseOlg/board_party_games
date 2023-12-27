@@ -6,3 +6,7 @@ type TChooseGame ={
   buttonText: string,
   to: string
 }
+
+interface TChooseGameWithClick extends TChooseGame {
+  onClick: () => void;
+}
