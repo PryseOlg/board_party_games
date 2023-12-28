@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/core": "7.1.7",
-    "@mantine/form": "^7.1.7",
+    "@mantine/core": "^7.1.7",
+    "@mantine/form": "^7.3.2",
     "@mantine/hooks": "7.1.7",
     "@mantine/next": "^6.0.21",
     "install": "^0.13.0",

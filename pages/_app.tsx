@@ -21,6 +21,8 @@ import NextImage from "next/image";
 
 export default function App({ Component, pageProps }: any) {
   const [opened, { toggle }] = useDisclosure();
+
+
   return (
     <MantineProvider>
 

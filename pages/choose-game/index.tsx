@@ -18,7 +18,13 @@ export default function ChooseGame() {
             badgeText="Бесплатно"
             buttonText="Играть"
             description="Ни на что не похожая разговорная игра!"
-            title="Находка шпиона" to={"/create-or-join"}></CustomCard>
+            title="Находка шпиона" to={"games/spyfall/create-or-join"}></CustomCard>
+          <CustomCard
+            imageUrl={uno}
+            badgeText="Бесплатно"
+            buttonText="Играть"
+            description="Jдна из самых популярных игр для большой весёлой компании во всем мире"
+            title="Настольная игра  X" to={"/games/codenames/create-or-join"}></CustomCard>
           <CustomCard
             imageUrl={catan}
             badgeText="Платно"

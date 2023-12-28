@@ -34,7 +34,7 @@ const CustomCard: React.FC<TChooseGame> = ({
       style={{ border: isActive ? '2px solid red' : '2px solid transparent' }} // Пример стилизации активной карточки
     >
       <Card.Section>
-        <Image component={NextImage} src={imageUrl} height={160} alt={title} />
+        <Image component={NextImage} src={imageUrl} height={160} width={160} alt={title} />
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
