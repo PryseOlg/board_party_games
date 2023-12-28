@@ -20,7 +20,7 @@ export default function CreateOrJoin() {
               badgeText=""
             buttonText="Присоединиться к игре"
             description="Здесь вы можете ввести ключ комнаты и зайти к своим друзьям"
-            title="Присоединение к комнате" to={"join-session"}></CustomCard>
+            title="Присоединение к комнате" to={"/games/spyfall"}></CustomCard>
         </SimpleGrid>
       </Flex>
     </>

@@ -1,5 +1,5 @@
 // Spyfall.tsx
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import {
   SimpleGrid,
   Container,
@@ -23,9 +23,40 @@ const Spyfall = () => {
   const [opened, { open, close }] = useDisclosure(false);
   const [isModalOpen, setModalOpen] = useState(true);
   const [successMessage, setSuccessMessage] = useState("");
+  const [locations, setLocations] = useState<{ id: string; name: string; imageUrl: string }[]>([]);
+
   const form = useForm({
     initialValues: {playerName: '', roomKey: '', role: '', locationName: ''},}
   );
+
+  useEffect(() => {
+    handleGetLocations();
+  }, []);
+
+  const handleGetLocations = async () => {
+    try {
+      const response = await fetch(`http://localhost/Spyfall/locationsByRoomId?id=${form.values.roomKey}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Полученные данные:", data);
+        if (Array.isArray(data) && data.length > 0 && 'name' in data[0] && 'imageUrl' in data[0]) {
+          setLocations(data);
+        } else {
+          console.error("Получены недопустимые данные для локаций:", data);
+        }
+      } else {
+        console.error("Произошла ошибка при получении локаций");
+      }
+    } catch (error) {
+      console.error('Произошла ошибка при отправке запроса:', error);
+    }
+  };
 
   const handleSubmit = async () => {
     try {
@@ -42,6 +73,8 @@ const Spyfall = () => {
       if (response.ok) {
         const data = await response.json();
         setSuccessMessage("Вы успешно присоединились к комнате!");
+        handleGetLocations()
+        setLocations(data)
         setModalOpen(false);
         form.values.role = data.role
         form.values.locationName = data.locationName
@@ -60,6 +93,7 @@ const Spyfall = () => {
       setSuccessMessage("");
     }
   };
+
 
   const handleCardClick = (cardTitle: string) => {
     if (form.values.role === "Шпион") {
@@ -129,25 +163,24 @@ const Spyfall = () => {
         )}
 
         <SimpleGrid cols={6}>
-          <CustomCard
-            imageUrl={card}
-            title={"Карточка 1"}
-            description={""}
-            buttonText={""}
-            to={""}
-            onClick={handleCardClick}
-            isActive={selectedCards.includes("Карточка 1")}
-          ></CustomCard>
-          <CustomCard
-            imageUrl={card}
-            title={"Карточка 2"}
-            description={""}
-            buttonText={""}
-            to={""}
-            onClick={handleCardClick}
-            isActive={selectedCards.includes("Карточка 2")}
-          ></CustomCard>
-          {/* Добавьте другие карточки с аналогичными параметрами */}
+          <Flex>
+            {Array.isArray(locations) ? (
+              locations.map((location) => (
+                <CustomCard
+                  key={location.id}
+                  imageUrl={card}
+                  title={location.name}
+                  description={""}
+                  buttonText={""}
+                  to={""}
+                  onClick={handleCardClick}
+                  isActive={selectedCards.includes(location.name)}
+                ></CustomCard>
+              ))
+            ) : (
+              <p>Данные о локациях не доступны или имеют неверный формат</p>
+            )}
+          </Flex>
         </SimpleGrid>
 
         <Space h={"xl"}></Space>
