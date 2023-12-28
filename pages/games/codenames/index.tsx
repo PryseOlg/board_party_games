@@ -10,7 +10,13 @@ const Codenames = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [responseMessage, setResponseMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
-  const [selectedWords, setSelectedWords] = useState<string[]>([]);
+  const [selectedWords, setSelectedWords] = useState<{ words: string[]; teamColor: string; isCap: boolean; colors: string[]; hiddenColors: string[] }>({
+    words: [],
+    teamColor: "",
+    isCap: false,
+    colors: [],
+    hiddenColors: Array(25).fill("revealed"),
+  });
   const [isModalOpen, setModalOpen] = useState(true);
   const form = useForm({
     initialValues: {
@@ -20,10 +26,13 @@ const Codenames = () => {
       locationName: "",
       words: [],
       teamColor: "",
-      isCap: bool,
+      isCap: false,
       colors: [],
+      hiddenColors: Array(25).fill("revealed"),
     },
   });
+
+  const [clickedIndexes, setClickedIndexes] = useState<number[]>([]);
 
   const handleSubmitGetWords = async () => {
     try {
@@ -39,7 +48,10 @@ const Codenames = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setSelectedWords(data);
+        setSelectedWords({
+          ...data,
+          hiddenColors: Array(data.words.length).fill("revealed"),
+        });
         setResponseMessage("");
         console.log(data);
       } else {
@@ -67,16 +79,19 @@ const Codenames = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setSelectedWords(data);
+        setSelectedWords({
+          ...data,
+          hiddenColors: Array(data.words.length).fill("revealed"),
+        });
         setResponseMessage('');
-        console.log('Слова с цветами:', data)
+        console.log('Слова с цветами:', data);
         setModalOpen(false);
-        form.values.words = data.words
-        form.values.teamColor = data.teamColor
-        form.values.isCap = data.isCap
-        form.values.colors = data.colors
-        console.log(form.values.words, form.values.teamColor, form.values.isCap, form.values.colors)
-
+        form.values.words = data.words;
+        form.values.teamColor = data.teamColor;
+        form.values.isCap = data.isCap;
+        form.values.colors = data.colors;
+        form.values.hiddenColors = Array(data.words.length).fill("revealed");
+        console.log(form.values.words, form.values.teamColor, form.values.isCap, form.values.colors);
       } else {
         const errorData = await response.json();
         setErrorMessage(errorData || 'Произошла ошибка при получении доступных слов');
@@ -87,43 +102,53 @@ const Codenames = () => {
     }
   };
 
+  const handleHiddenBadgeClick = (index: number) => {
+    setClickedIndexes((prevIndexes) => {
+      if (prevIndexes.includes(index)) {
+        // Если индекс уже есть в массиве, удаляем его
+        return prevIndexes.filter((i) => i !== index);
+      } else {
+        // Иначе добавляем индекс в массив
+        return [...prevIndexes, index];
+      }
+    });
+  };
+
   const renderGameBoard = () => {
     const { colors, words } = form.values;
 
     return (
-      <Box style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 8 }}>
-        {colors.map((color, index) => (
-          <Badge fullWidth key={index} color={color} size="xl" radius="md">
-            {words[index]}
-          </Badge>
-        ))}
-      </Box>
-    );
-  };
-
-  const renderHiddenGameBoard = () => {
-    const { colors } = form.values;
-
-    const handleHiddenBadgeClick = (color: never, index: number) => {
-      // Обработка нажатия на скрытый Badge, здесь можно добавить свою логику
-      console.log(`Скрытый Badge с цветом ${color} нажат на индексе ${index}`);
-    };
-
-    return (
-      <Box style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 8 }}>
-        {colors.map((color, index) => (
-          <Badge
-            fullWidth
-            key={index}
-            size="xl"
-            radius="md"
-            onClick={() => handleHiddenBadgeClick(color, index)}
-          >
-            {/* Показать цвет только после нажатия */}
-            {color === "revealed" ? <span style={{ backgroundColor: color, width: "100%", height: "100%" }} /> : null}
-          </Badge>
-        ))}
-      </Box>
+      <>
+        <Box style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 8 }}>
+          {colors.map((color, index) => (
+            <Badge
+              fullWidth
+              key={index}
+              color={color}
+              size="xl"
+              radius="md"
+              onClick={() => handleHiddenBadgeClick(index)}
+            >
+              {words[index]}
+            </Badge>
+          ))}
+        </Box>
+        <Space h={"xl"}></Space>
+        <Box style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 8 }}>
+          {colors.map((color, index) => (
+            <Badge
+              fullWidth
+              key={index}
+              color={clickedIndexes.includes(index) ? color : "cyan"}
+              size="xl"
+              radius="md"
+              onClick={() => handleHiddenBadgeClick(index)}
+            >
+              {words[index]}
+            </Badge>
+          ))}
+        </Box>
+      </>
     );
   };
 
@@ -165,14 +190,13 @@ const Codenames = () => {
           <Space h={"xl"} />
           <Space h={"xl"} />
           <Space h={"xl"} />
-          {form.values.isCap?.valueOf() === true ? (
+          {selectedWords.isCap ? (
             <Box>
               <Space h={"xl"} />
               <Text>
-                Вы Капитан! Вы видите все правильные цвета для слов. Ваша цель строить взаимосвязи чтобы другие игроки поняли!
+                Вы Капитан! Вы видите все правильные цвета для слов. Ваша цель строить взаимосвязи, чтобы другие игроки поняли!
               </Text>
               {renderGameBoard()}
-              {renderHiddenGameBoard()}
             </Box>
           ) : (
             <Flex>
