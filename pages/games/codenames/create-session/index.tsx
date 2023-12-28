@@ -28,7 +28,7 @@ export default function CreateSession() {
 
   const handleSubmitGetLocations = async () => {
     try {
-      const response = await fetch(`http://localhost:80/spyfall/decks`, {
+      const response = await fetch(`http://localhost:80/codenames/decks`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -57,21 +57,27 @@ export default function CreateSession() {
     event.preventDefault();
 
     try {
+      const customWordsArray = form.values.customWords
+        ? form.values.customWords.split(',').map((word) => word.trim())
+        : [];
+
       const response = await fetch('http://localhost:80/codenames/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          decks: selectedDeck,
+          deck: form.values.deckName,
           playersCount: form.values.playersCount,
+          customWords: customWordsArray,
         }),
       });
 
       if (response.ok) {
         const data = await response.json();
         setResponseMessage(`Комната успешно создана! ID комнаты: ${data.id}`);
-        setRoomId(data.id);
+        setRoomId(data.id)
+        console.log(data)
       } else {
         const errorData = await response.text();
         setErrorMessage(errorData || 'Произошла ошибка при создании комнаты');
@@ -165,21 +171,36 @@ export default function CreateSession() {
         </Stack>
       </Stack>
 
-      <Box>
-        <Stack align={"center"} justify={"center"}>
-          {roomId && <p>Комната успешно создана! Ключ комнаты: {roomId}</p>}
-          {roomId && (
-            <CopyButton value={roomId}>
-              {({ copied, copy }) => (
-                <Button color={copied ? 'teal' : 'blue'} onClick={copy}>
-                  {copied ? 'Ключ комнаты скопирован!' : 'Скопировать ключ комнаты и зайти в игру'}
-                </Button>
-              )}
-            </CopyButton>
-          )}
-        </Stack>
-
-      </Box>
+      <Flex mih={50}
+            gap="md"
+            justify="center"
+            align="center"
+            direction="column"
+            wrap="wrap">
+        {roomId && (
+          <>
+            <Flex align="center">
+              <p>Комната успешно создана! Ключ комнаты: {roomId}</p>
+              <Space ml="sm" />
+              <CopyButton value={roomId}>
+                {({ copied, copy }) => (
+                  <Button color={copied ? 'teal' : 'blue'} onClick={copy}>
+                    {copied ? 'Скопировано!' : 'Скопировать ключ комнаты'}
+                  </Button>
+                )}
+              </CopyButton>
+            </Flex>
+            <Space mt="sm" />
+            <a href={`/games/codenames`}>
+              <Button color="blue">
+                Перейти в игру
+              </Button>
+            </a>
+          </>
+        )}
+        <Space mt="xl" />
+        <Space mt="xl" />
+      </Flex>
       <Space h="xl" />
       <Space h="xl" />
 
